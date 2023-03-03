@@ -10,7 +10,7 @@ public class Main {
         while (i < 1) {
             String userInput = scanner.next();
             if (userInput.equals("yes")) {
-                System.out.println("...For your convenience, I recommend typing all commands in lowercase! Begin below!");
+                System.out.println("You are currently on Planet Cookie! Your home planet! And you're a frog! With a jetpack! And your jetpack can propel you out into space! \nFor your convenience, I recommend typing all commands in lowercase! Begin below! (if you need a hint, try 'hint')");
                 i++;
             } else if (userInput.equals("no")) {
                 System.out.println("Alright then, let the game begin!");
@@ -20,7 +20,7 @@ public class Main {
             }
         }
         pointCounter = planetCookie(pointCounter);
-        System.out.println("successfully left planet cookie!");
+
 
 //        System.out.println("You have won! With a grand total of "+pointCounter+" points!");
 
@@ -31,8 +31,12 @@ public class Main {
         String userInput = scanner.nextLine();
         while(!userInput.equals("take off")) {
             //commands like jump or wtv using if loops
+            if(userInput.equals("jump")==true){
+                System.out.println("YAY! you jumped! using your frog legs! now do something else!");
+                pointCounter++;
+            }
             //command for if user input !equal any viable commands, print this is not a command I understand
-            System.out.println("This isn't a command I understand :(");
+            else System.out.println("This isn't a command I understand :(");
             userInput = scanner.nextLine();
         }
 
